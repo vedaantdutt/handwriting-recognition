@@ -24,5 +24,14 @@ model = models.Sequential([
 ])
 
 
+model.compile(optimizer='adam', 
+              loss='sparse_categorical_crossentropy', 
+              metrics=['accuracy'])
+
+
+
+validation_data=(test_images, test_labels)
+model.fit(train_images, train_labels, epochs=7, batch_size=64,validation_data=validation_data)
+
 
 
