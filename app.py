@@ -35,3 +35,5 @@ model.fit(train_images, train_labels, epochs=7, batch_size=64,validation_data=va
 
 
 
+test_loss, test_acc = model.evaluate(test_images, test_labels)
+print(f"Test accuracy: {test_acc}")
